@@ -9,7 +9,7 @@ function Transactions() {
 });
     return (
     <>
-    <Heading>Latest Trasactions</Heading>
+    <Heading fontSize={'3xl'} mb={'10'}>Latest Trasactions</Heading>
     <Table.Root size="sm">
         <Table.Header>
             <Table.Row>
@@ -22,7 +22,7 @@ function Transactions() {
         <Table.Body>
             {items.map((item) => (
             <Table.Row key={item.id}>
-                <Table.Cell>{item.date}</Table.Cell>
+                <Table.Cell >{item.date}</Table.Cell>
                 <Table.Cell>{item.name}</Table.Cell>
                 <Table.Cell>{item.category}</Table.Cell>
                 <Table.Cell textAlign="end">{formatter.format(item.price)}</Table.Cell>

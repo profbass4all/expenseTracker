@@ -37,7 +37,7 @@ const data = {
 function Display() {
     return (
         <>
-            <Flex flexDirection={['column', 'column', 'column', 'row']} mt='20' align={'center'} maxW={'37rem'} justify={['center', 'center', 'space-between']} gap='16' >
+            <Flex flexDirection={['column', 'column', 'column', 'row']} mt='20' align={'center'} maxW={'37rem'} justify={['center', 'center', 'space-between']} gap='16' mb='20' >
                 
                 <Bar data={data} style={{marginBottom: '3rem'}} options={{
             responsive: true,
@@ -61,8 +61,8 @@ function Display() {
             },
                 
                 }}/>
-                    
-                <Doughnut data={data}  options={{
+                <Box>
+                    <Doughnut data={data}   options={{
             responsive: true,
             plugins: {
                 legend: {
@@ -70,6 +70,8 @@ function Display() {
                 },
             },
             }}/>
+                </Box>  
+                
                 
             </Flex>
         </>
